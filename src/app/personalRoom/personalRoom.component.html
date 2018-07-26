@@ -1,0 +1,59 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <td>Заголовок</td>
+    <td>Техт </td>
+    <td></td>
+    <td></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of allNews">
+    <ng-template [ngTemplateOutlet]="loadTemplate(item)"
+                 [ngTemplateOutletContext]="{ $implicit: item}">
+    </ng-template>
+  </tr>
+  </tbody>
+</table>
+<div class="row">
+  <form class="col s5">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="title" [(ngModel)]="newtitle" name='title' type="text" >
+        <span class="helper-text" data-error="wrong" data-success="right">Enter the Title</span>
+      </div>
+      <div class="input-field col s12">
+        <input id="text" [(ngModel)]="newtext" name='text' type="text" >
+        <span class="helper-text" data-error="wrong" data-success="right">Enter the text of feed</span>
+      </div>
+    </div>
+  </form>
+</div>
+<input type="button" value="Добавить" (click)="addNews()" class="btn btn-default"  />
+
+<!--шаблон для чтения-->
+<ng-template #readOnlyTemplate let-item>
+  <td>{{item.Title}}</td>
+  <td>{{item.Text}}</td>
+  <td>
+    <input type="button" value="Изменить" (click)="editNews(item)" class="btn btn-default"  />
+  </td>
+  <td>
+    <input type="button" value="Удалить" (click)="deleteNews(item)" class="btn btn-danger" />
+  </td>
+</ng-template>
+
+<ng-template #editTemplate>
+  <td>
+    <input type="text" [(ngModel)]="editedNews.Title" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="editedNews.Text" class="form-control" />
+  </td>
+  <td>
+    <input type="button" value="Сохранить" (click)="saveEditesNews()"  class="btn btn-success" />
+  </td>
+  <td>
+    <input type="button" value="Отмена" (click)="canselEdite()" class="btn btn-warning" />
+  </td>
+</ng-template>
