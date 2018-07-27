@@ -6,7 +6,7 @@ import { NewsItemComponent} from './NewsItem/newsItem.component';
 import {PersonalRoomComponent} from './personalRoom/personalRoom.component';
 import {RouterModule} from '@angular/router';
 import {MainPageComponent} from './mainPage/mainPage.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 
@@ -26,7 +26,8 @@ const routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

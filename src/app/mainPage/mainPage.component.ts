@@ -13,7 +13,7 @@ export class MainPageComponent implements OnInit {
 
  constructor(private serv: NewsService) {
     this.allNews = new Array<News>();
-  }
+ }
   ngOnInit() {
     this.loadFeeds();
   }

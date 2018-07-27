@@ -1,6 +1,11 @@
-.feed-card{
-  padding: 10px;
+.autorization-field{
+  width: 700px;
+  height: 500px;
+  border: solid coral 1px;
+  margin: 0 auto;
+  margin-top: 220px;
 }
+
 .nav-wrapper{
   color: coral;
 }
