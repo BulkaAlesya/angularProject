@@ -2,28 +2,11 @@
   <div class="nav-wrapper">
     <a href="#" class="brand-logo">News</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a routerLink="/personalRoom" > Sign Up</a></li>
-      <li><a routerLink="/personalRoom" > Sign In</a></li>
+      <li><a routerLink="/authorization" > Sign In</a></li>
+      <li><a routerLink="/registration" > Sign Up</a></li>
     </ul>
   </div>
 </nav>
-<div class="autorization-field">
-  <form [formGroup]="registrationForms" novalidate (ngSubmit)="onSubmit()">
-    <div class="form-group" style="width: 100px">
-      <label>Имя</label>
-      <input class="form-control" name="name" formControlName="userName" />
-    </div>
-    <div class="form-group">
-      <label>Email</label>
-      <input class="form-control" name="email"  formControlName="userEmail" />
-    </div>
-    <div class="form-group">
-      <button class="btn btn-default" [disabled]="registrationForms.invalid" (click)="regiatration()">
-        Отправить
-      </button>
-      <button class="btn btn-default" [disabled]="registrationForms.invalid" (click)="autorixation()">
-        autorization
-      </button>
-    </div>
-  </form>
+  <div>
+    <router-outlet></router-outlet>
 </div>

@@ -1,4 +1,4 @@
-.autorization-field{
+.authorization-field{
   width: 700px;
   height: 500px;
   border: solid coral 1px;
@@ -8,4 +8,14 @@
 
 .nav-wrapper{
   color: coral;
+}
+.main-text{
+  width: 55%;
+  height: 200px;
+  margin: 200px 470px 0;
+  padding: 20px;
+  color: dimgrey;
+  font-family: "Arial Black";
+  font-size: 3em;
+  border: solid coral 1px;
 }

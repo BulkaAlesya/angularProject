@@ -1,7 +1,7 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <td>Заголовок</td>
+    <td>Title</td>
     <td>Техт </td>
     <td></td>
     <td></td>
@@ -24,22 +24,22 @@
       </div>
       <div class="input-field col s12">
         <input id="text" [(ngModel)]="newtext" name='text' type="text" >
-        <span class="helper-text" data-error="wrong" data-success="right">Enter the text of feed</span>
+        <span class="helper-text" data-error="wrong" data-success="right">Enter the text of news</span>
       </div>
     </div>
   </form>
 </div>
-<input type="button" value="Добавить" (click)="addNews()" class="btn btn-default"  />
+<input type="button" value="Add" (click)="addNews()" class="btn btn-default"  />
 
 <!--шаблон для чтения-->
 <ng-template #readOnlyTemplate let-item>
   <td>{{item.Title}}</td>
   <td>{{item.Text}}</td>
   <td>
-    <input type="button" value="Изменить" (click)="editNews(item)" class="btn btn-default"  />
+    <input type="button" value="Edit" (click)="editNews(item)" class="btn btn-default"  />
   </td>
   <td>
-    <input type="button" value="Удалить" (click)="deleteNews(item)" class="btn btn-danger" />
+    <input type="button" value="Delete" (click)="deleteNews(item)" class="btn btn-danger" />
   </td>
 </ng-template>
 
@@ -51,9 +51,9 @@
     <input type="text" [(ngModel)]="editedNews.Text" class="form-control" />
   </td>
   <td>
-    <input type="button" value="Сохранить" (click)="saveEditesNews()"  class="btn btn-success" />
+    <input type="button" value="Save" (click)="saveEditesNews()"  class="btn btn-success" />
   </td>
   <td>
-    <input type="button" value="Отмена" (click)="canselEdite()" class="btn btn-warning" />
+    <input type="button" value="Cancel" (click)="canselEdite()" class="btn btn-warning" />
   </td>
 </ng-template>

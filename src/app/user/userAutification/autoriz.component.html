@@ -1,0 +1,34 @@
+
+<div class="authorization-field">
+  <form [formGroup]="registrationForms" novalidate (ngSubmit)="onSubmit()">
+    <div class="form-group" style="width: 470px; padding: 50px; padding-bottom: 0 ">
+      <label>Login</label>
+      <input class="form-control" name="name" formControlName="userName" />
+    </div>
+    <div class="form-group" style="width: 440px; padding-left: 50px">
+      <label>Password</label>
+      <input class="form-control" name="email"  formControlName="userEmail" />
+    </div>
+    <div class="form-group">
+      <a class="btn btn-default" style="margin: 5px 20px 0px 40px"  (click)="authorization()">Sign In
+      </a>
+    </div>
+  </form>
+  <div *ngIf="userRoleAdmin" class="user-message">
+    <p style="color: gray; margin-left: 200px">
+      Authorization was successful</p>
+    <a class="btn btn-default" style="margin-left: 300px; display: inline-block" routerLink="/personalRoom">
+      ОK
+    </a>
+  </div>
+  <div *ngIf="userRoleUser" class="user-message">
+    <p style="color: gray; margin-left: 200px">
+      Authorization was successful</p>
+    <a class="btn btn-default" style="margin-left: 300px; display: inline-block" routerLink="/mainPage">
+      ОK
+    </a>
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

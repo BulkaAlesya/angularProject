@@ -9,10 +9,14 @@ import {MainPageComponent} from './mainPage/mainPage.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
+import {AutorizComponent} from './user/userAutification/autoriz.component';
+import {RegistrComponent} from './user/Registration/registr.component';
 
 const routes = [
-  {path: '', component: MainPageComponent},
-  {path: 'personalRoom', component: PersonalRoomComponent}
+  {path: 'mainPage', component: MainPageComponent},
+  {path: 'personalRoom', component: PersonalRoomComponent},
+  {path: 'authorization', component: AutorizComponent},
+  {path: 'registration', component: RegistrComponent}
 ];
 
 @NgModule({
@@ -20,7 +24,9 @@ const routes = [
     AppComponent,
     NewsItemComponent,
     PersonalRoomComponent,
-    MainPageComponent
+    MainPageComponent,
+    AutorizComponent,
+    RegistrComponent
   ],
   imports: [
     BrowserModule,

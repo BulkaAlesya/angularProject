@@ -1,0 +1,12 @@
+.authorization-field{
+  width: 700px;
+  height: 350px;
+  border: solid coral 1px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.user-message{
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+}

@@ -34,6 +34,7 @@ export class PersonalRoomComponent implements OnInit {
 
   addNews() {
     this.newItem = new News(0, this.newtitle, this.newtext);
+
     this.serv.createNews(this.newItem).subscribe(data => {
       this.loadNews();
     });
